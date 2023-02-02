@@ -13,7 +13,7 @@ jobs:
     - uses: fastai/workflows/ssh@master
       with:
         ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        GH_TOKEN: ${{ github.token }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
         key_file: github.action
     - uses: actions/checkout@v2
     - name: Session Setup
